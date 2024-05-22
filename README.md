@@ -46,3 +46,4 @@
 ![img_3.png](img_3.png)
 
 6. Зробити рефакторинг методу com.javarush.jira.bugtracking.attachment.FileUtil#upload. +
+7. Додати новий функціонал: додавання тегів до завдання (REST API + реалізація на сервісі). +
