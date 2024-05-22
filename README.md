@@ -41,6 +41,8 @@
 
 ![img_2.png](img_2.png)
 
-5. Написати тести для всіх публічних методів контролера ProfileRestController.
+5. Написати тести для всіх публічних методів контролера ProfileRestController. +
 
 ![img_3.png](img_3.png)
+
+6. Зробити рефакторинг методу com.javarush.jira.bugtracking.attachment.FileUtil#upload. +
