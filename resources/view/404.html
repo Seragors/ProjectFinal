@@ -5,7 +5,7 @@
     <meta content="404 Not found" name="title"/>
     <meta content="404 Not found" name="Description"/>
 
-    <title>Application Error</title>
+    <title th:text="#{app.error.title}"></title>
     <link href="/static/images/icon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="/static/images/icon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
@@ -32,13 +32,13 @@
                                        type="search">
                             </form>
                             <li class="nav-item menu-item me-3 ms-4">
-                                <a class="btn btn-yellow" href="/doc" target="_blank" type="button">Swagger API</a>
+                                <a class="btn btn-yellow" href="/doc" target="_blank" type="button" th:text="#{header.swagger}"></a>
                             </li>
                         </ul>
 
                         <div>
                             <a class="btn btn-orange" href="/ui/profile" type="button"><i
-                                    class="fa-solid fa-address-card"></i> Profile</a>
+                                    class="fa-solid fa-address-card"> <span th:text="#{header.profile}"></span></i></a>
                         </div>
                     </div>
                 </div>
@@ -66,23 +66,28 @@
 
                     <li class="nav-item menu-item mt-3 mt-lg-0 mb-0 mb-lg-3" id="test1">
                         <a class="nav-link sidebar-nav-link" href="#test1"><span class="ms-4"><i
-                                class="fa-regular fa-folder-open fa-fw me-2"></i>Link_1</span></a>
+                                class="fa-regular fa-folder-open fa-fw me-2"></i><span
+                                th:text="#{sidebar.test.link-1}"></span></span></a>
                     </li>
                     <li class="nav-item menu-item mb-0 mb-lg-3" id="test2">
                         <a class="nav-link sidebar-nav-link" href="#test2"><span class="ms-4"><i
-                                class="fa-solid fa-list-check fa-fw me-2"></i>Link_2</span></a>
+                                class="fa-solid fa-list-check fa-fw me-2"></i><span
+                                th:text="#{sidebar.test.link-2}"></span></span></a>
                     </li>
                     <li class="nav-item menu-item mb-0 mb-lg-3" id="test3">
                         <a class="nav-link sidebar-nav-link" href="#test3"><span class="ms-4"><i
-                                class="fa-solid fa-bug fa-fw me-2"></i>Link_3</span></a>
+                                class="fa-solid fa-bug fa-fw me-2"></i><span
+                                th:text="#{sidebar.test.link-3}"></span></span></a>
                     </li>
                     <li class="nav-item menu-item mb-0 mb-lg-3" id="test4">
                         <a class="nav-link sidebar-nav-link" href="#test4"><span class="ms-4"><i
-                                class="fa-solid fa-book-skull fa-fw me-2"></i>Link_4</span></a>
+                                class="fa-solid fa-book-skull fa-fw me-2"></i><span
+                                th:text="#{sidebar.test.link-4}"></span></span></a>
                     </li>
                     <li class="nav-item menu-item" id="test5">
                         <a class="nav-link sidebar-nav-link" href="#test5"><span class="ms-4"><i
-                                class="fa-solid fa-comments fa-fw me-2"></i>Link_5</span></a>
+                                class="fa-solid fa-comments fa-fw me-2"></i><span
+                                th:text="#{sidebar.test.link-5}"></span></span></a>
                     </li>
                 </ul>
             </div>
@@ -94,8 +99,8 @@
             <appMain>
                 <div class="text-center">
                     <br>
-                    <h3 class="my-5">404 NOT_FOUND</h3>
-                    <h1 class="my-3">No page here</h1>
+                    <h3 class="my-5" th:text="#{app.error.code}"></h3>
+                    <h1 class="my-3" th:text="#{app.error.message}"></h1>
                 </div>
             </appMain>
         </div>
@@ -111,68 +116,62 @@
                                 LEARN
                             </h6>
                             <p>
-                                <a class="footer-href" href="#">Programming Courses</a>
+                                <a class="footer-href" href="#" th:text="#{footer.learn.courses.programming}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Java Course</a>
+                                <a class="footer-href" href="#" th:text="#{footer.learn.courses.java}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Help with Tasks</a>
+                                <a class="footer-href" href="#" th:text="#{footer.learn.help}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Pricing</a>
+                                <a class="footer-href" href="#" th:text="#{footer.learn.pricing}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Game Projects</a>
+                                <a class="footer-href" href="#" th:text="#{footer.learn.projects.game}"></a>
                             </p>
                         </div>
                         <div class="col-md-4 col-xl-2 mb-4 mt-0 mt-md-4">
-                            <h6 class="fw-bold mb-4">
-                                COMMUNITY
+                            <h6 class="fw-bold mb-4" th:text="#{footer.community}">
                             </h6>
                             <p>
-                                <a class="footer-href" href="#">Users</a>
+                                <a class="footer-href" href="#" th:text="#{footer.community.users}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Articles</a>
+                                <a class="footer-href" href="#" th:text="#{footer.community.articles}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Forum</a>
+                                <a class="footer-href" href="#" th:text="#{footer.community.forum}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Chat</a>
+                                <a class="footer-href" href="#" th:text="#{footer.community.chat}"></a>
                             </p>
                             <p>
-                                <a class="footer-href" href="#">Success Stories</a>
+                                <a class="footer-href" href="#" th:text="#{footer.community.success}"></a>
                             </p>
                         </div>
                         <div class="col-md-4 col-xl-2 mb-4 mt-0 mt-md-4">
-                            <h6 class="fw-bold mb-4">COMPANY</h6>
+                            <h6 class="fw-bold mb-4" th:text="#{footer.company}"></h6>
                             <p>
-                                <a class="footer-href" href="#">About us</a>
-                            <p>
-                            <p>
-                                <a class="footer-href" href="#">Contacts</a>
+                                <a class="footer-href" href="#" th:text="#{footer.company.about}"></a>
                             <p>
                             <p>
-                                <a class="footer-href" href="#">Reviews</a>
+                                <a class="footer-href" href="#" th:text="#{footer.company.contacts}"></a>
                             <p>
                             <p>
-                                <a class="footer-href" href="#">FAQ</a>
+                                <a class="footer-href" href="#" th:text="#{footer.company.reviews}"></a>
                             <p>
                             <p>
-                                <a class="footer-href" href="#">Support</a>
+                                <a class="footer-href" href="#" th:text="#{footer.company.faq}"></a>
+                            <p>
+                            <p>
+                                <a class="footer-href" href="#" th:text="#{footer.company.support}"></a>
                             <p>
                         </div>
 
                         <div class="col-xl-5 mb-4 mt-0 mt-md-4">
                             <img alt="JavaRush" class="mb-3" src="/static/images/logo/jr.svg">
-                            <p>
-                                JavaRush is an online course for learning Java programming from scratch.
-                                This course is a perfect way to master Java for beginners.
-                                It contains 1200+ of tasks with instant verification and an essential scope of Java
-                                fundamentals theory.
-                            </p>
+                            <p th:text="#{footer.text}"></p>
                             <h6>FOLLOW US</h6>
                             <div>
                                 <a class="btn btn-sm btn-outline-light me-2" href="#" type="button">
@@ -199,7 +198,7 @@
                 </div>
             </section>
             <div class="text-center pb-4">
-                Programmers Are Made, Not Born © 2023 JavaRush
+                <p th:text="#{footer.citation}"></p>
             </div>
         </footer>
     </div>

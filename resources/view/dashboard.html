@@ -4,15 +4,15 @@
 <th:block
         th:replace="~{layout/main::page(title='JiraRush: mini bugtracking system',appMainFluid=~{::appMain}, activeMenuItem='dashboard')}">
     <appMain>
-        <h1>Dashboard</h1>
+        <h1 th:text="#{app.dashboard}"></h1>
         <div class="card">
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-12 col-sm-7 col-xl-4 col-xxl-3">
                         <div class="input-group">
-                            <span class="input-group-text" title="Project">Project</span>
+                            <span class="input-group-text" title="Project" th:text="#{app.dashboard.project}"></span>
                             <select class="form-select" id="project-selector" th:disabled="${projects.isEmpty()}">
-                                <option th:if="${projects.isEmpty()}" value="-1">No projects</option>
+                                <option th:if="${projects.isEmpty()}" value="-1" th:text="#{app.dashboard.no-projects}"></option>
                                 <option th:each="project : ${projects}" th:if="${!projects.isEmpty()}"
                                         th:text="${project.title}" th:value="${project.id}"></option>
                             </select>
@@ -29,7 +29,7 @@
             <div class="col mb-3 pe-xxl-0 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body text-center px-1">
-                        <h5 class="card-title">TO DO</h5>
+                        <h5 class="card-title" th:text="#{app.dashboard.TO-DO}"></h5>
                         <div id="todo-task-column"></div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
             <div class="col mb-3 pe-xxl-0 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body text-center px-1">
-                        <h5 class="card-title">IN PROGRESS</h5>
+                        <h5 class="card-title" th:text="#{app.dashboard.IN-PROGRESS}"></h5>
                         <div id="in-progress-task-column"></div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
             <div class="col mb-3 pe-xxl-0 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body text-center px-1">
-                        <h5 class="card-title">REVIEW</h5>
+                        <h5 class="card-title" th:text="#{app.dashboard.REVIEW}"></h5>
                         <div id="review-task-column"></div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
             <div class="col mb-3 pe-xxl-0 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body text-center px-1">
-                        <h5 class="card-title">TEST</h5>
+                        <h5 class="card-title" th:text="#{app.dashboard.TEST}"></h5>
                         <div id="test-task-column"></div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
             <div class="col mb-3 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body text-center px-1">
-                        <h5 class="card-title">DONE</h5>
+                        <h5 class="card-title" th:text="#{app.dashboard.DONE}"></h5>
                         <div id="done-task-column"></div>
                     </div>
                 </div>

@@ -10,8 +10,8 @@
         <hr>
         <h6>Project: <a th:href="@{'/ui/projects/' + ${sprint.projectId}}">[[${sprint.project.code}]]</a></h6>
         <h6><a href="#"
-               th:if="${sprint.statusCode == 'finished'}" th:onclick="|showReport('${sprint.projectId}', '${sprint.id}')|">Report</a></h6>
-        <h6><a href="#" th:if="${sprint.statusCode == 'active'}" th:onclick="|showDashboard('${sprint.projectId}')|">Dashboard</a>
+               th:if="${sprint.statusCode == 'finished'}" th:onclick="|showReport('${sprint.projectId}', '${sprint.id}')|" th:text="#{sidebar.reports }"></a></h6>
+        <h6><a href="#" th:if="${sprint.statusCode == 'active'}" th:onclick="|showDashboard('${sprint.projectId}')|" th:text="#{app.dashboard}"></a>
         </h6>
     </sprint>
 </th:block>
