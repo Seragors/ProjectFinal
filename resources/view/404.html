@@ -37,8 +37,8 @@
                         </ul>
 
                         <div>
-                            <a class="btn btn-orange" href="/ui/profile" type="button"><i
-                                    class="fa-solid fa-address-card"> <span th:text="#{header.profile}"></span></i></a>
+                            <a class="btn btn-orange" href="/ui/profile" type="button" th:text="#{header.profile}"><i
+                                    class="fa-solid fa-address-card"></i></a>
                         </div>
                     </div>
                 </div>
@@ -66,28 +66,23 @@
 
                     <li class="nav-item menu-item mt-3 mt-lg-0 mb-0 mb-lg-3" id="test1">
                         <a class="nav-link sidebar-nav-link" href="#test1"><span class="ms-4"><i
-                                class="fa-regular fa-folder-open fa-fw me-2"></i><span
-                                th:text="#{sidebar.test.link-1}"></span></span></a>
+                                class="fa-regular fa-folder-open fa-fw me-2" th:text="#{sidebar.test.link-1}"></i></span></a>
                     </li>
                     <li class="nav-item menu-item mb-0 mb-lg-3" id="test2">
                         <a class="nav-link sidebar-nav-link" href="#test2"><span class="ms-4"><i
-                                class="fa-solid fa-list-check fa-fw me-2"></i><span
-                                th:text="#{sidebar.test.link-2}"></span></span></a>
+                                class="fa-solid fa-list-check fa-fw me-2" th:text="#{sidebar.test.link-2}"></i></span></a>
                     </li>
                     <li class="nav-item menu-item mb-0 mb-lg-3" id="test3">
                         <a class="nav-link sidebar-nav-link" href="#test3"><span class="ms-4"><i
-                                class="fa-solid fa-bug fa-fw me-2"></i><span
-                                th:text="#{sidebar.test.link-3}"></span></span></a>
+                                class="fa-solid fa-bug fa-fw me-2" th:text="#{sidebar.test.link-3}"></i></span></a>
                     </li>
                     <li class="nav-item menu-item mb-0 mb-lg-3" id="test4">
                         <a class="nav-link sidebar-nav-link" href="#test4"><span class="ms-4"><i
-                                class="fa-solid fa-book-skull fa-fw me-2"></i><span
-                                th:text="#{sidebar.test.link-4}"></span></span></a>
+                                class="fa-solid fa-book-skull fa-fw me-2" th:text="#{sidebar.test.link-4}"></i></span></a>
                     </li>
                     <li class="nav-item menu-item" id="test5">
                         <a class="nav-link sidebar-nav-link" href="#test5"><span class="ms-4"><i
-                                class="fa-solid fa-comments fa-fw me-2"></i><span
-                                th:text="#{sidebar.test.link-5}"></span></span></a>
+                                class="fa-solid fa-comments fa-fw me-2" th:text="#{sidebar.test.link-5}"></i></span></a>
                     </li>
                 </ul>
             </div>
@@ -171,7 +166,8 @@
 
                         <div class="col-xl-5 mb-4 mt-0 mt-md-4">
                             <img alt="JavaRush" class="mb-3" src="/static/images/logo/jr.svg">
-                            <p th:text="#{footer.text}"></p>
+                            <p th:text="#{footer.text}">
+                            </p>
                             <h6>FOLLOW US</h6>
                             <div>
                                 <a class="btn btn-sm btn-outline-light me-2" href="#" type="button">
@@ -197,8 +193,7 @@
                     </div>
                 </div>
             </section>
-            <div class="text-center pb-4">
-                <p th:text="#{footer.citation}"></p>
+            <div class="text-center pb-4" th:text="#{footer.citation}">
             </div>
         </footer>
     </div>

@@ -16,7 +16,7 @@
                                     <span class="input-group-text fw-bold" title="Project" th:text="#{app.dashboard.project}"></span>
                                     <select class="form-select" id="project-selector"
                                             th:disabled="${projects.isEmpty()}">
-                                        <option th:if="${projects.isEmpty()}" value="-1">No projects</option>
+                                        <option th:if="${projects.isEmpty()}" value="-1" th:text="#{app.dashboard.no-projects}"></option>
                                         <option th:each="project : ${projects}" th:if="${!projects.isEmpty()}"
                                                 th:text="${project.title}" th:value="${project.id}"></option>
                                     </select>

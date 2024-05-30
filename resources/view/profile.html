@@ -35,10 +35,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                    th:text="#{footer.modal.profile.cancel}"></button>
-                            <button type="submit" class="btn btn-primary" id="changePassword"
-                                    th:text="#{footer.modal.profile.save}"></button>
+                            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button" th:text="#{footer.modal.profile.cancel}"></button>
+                            <button class="btn btn-primary" id="changePassword" type="submit" th:text="#{footer.modal.profile.save}">
                             </button>
                         </div>
                     </div>
@@ -46,7 +44,7 @@
             </div>
         </div>
         <div class="card mb-3">
-            <div class="card-header" th:text="#{profile.title.info}"><h4></h4></div>
+            <div class="card-header"><h4 th:text="#{profile.title.info}"></h4></div>
             <div class="card-body">
                 <button class="btn btn-primary mb-3" data-bs-target="#changePasswordModal" data-bs-toggle="modal"
                         type="button" th:text="#{profile.button.password.change}">
@@ -98,7 +96,7 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header" th:text="#{profile.title.profile}"><h4></h4></div>
+            <div class="card-header"><h4 th:text="#{profile.title.profile}"></h4></div>
             <div class="card-body">
                 <form action="/ui/profile" id="profileForm" method="post">
                     <div class="alert alert-danger" role="alert" th:if="${profileError != null}"
@@ -145,7 +143,7 @@
                             </table>
                             <div class="dropdown">
                                 <button aria-expanded="false" class="btn btn-secondary dropdown-toggle"
-                                        data-bs-toggle="dropdown" type="button" th:text="#{profile.button.contacts.add}">
+                                        data-bs-toggle="dropdown" type="button"  th:text="#{profile.button.contacts.add}">
                                 </button>
                                 <ul aria-labelledby="addContact" class="dropdown-menu">
                                     <li th:each="contactType : ${contactRefs}">
