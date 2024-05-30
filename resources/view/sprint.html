@@ -6,12 +6,12 @@
 <th:block
         th:replace="~{layout/bugtrackLayout::view(${sprint}, ${authUser.isManager()}?'/ui/mngr/sprints/edit/':null, ~{::sprint}, ${fragment})}">
     <sprint>
-        <h5>Status: [[${sprint.statusCode}]]</h5>
+        <h5 th:text="#{app.dashboard.status} +': '"> [[${sprint.statusCode}]]</h5>
         <hr>
-        <h6>Project: <a th:href="@{'/ui/projects/' + ${sprint.projectId}}">[[${sprint.project.code}]]</a></h6>
+        <h6 th:text="#{app.dashboard.project} +': '"><a th:href="@{'/ui/projects/' + ${sprint.projectId}}">[[${sprint.project.code}]]</a></h6>
         <h6><a href="#"
-               th:if="${sprint.statusCode == 'finished'}" th:onclick="|showReport('${sprint.projectId}', '${sprint.id}')|">Report</a></h6>
-        <h6><a href="#" th:if="${sprint.statusCode == 'active'}" th:onclick="|showDashboard('${sprint.projectId}')|">Dashboard</a>
+               th:if="${sprint.statusCode == 'finished'}" th:onclick="|showReport('${sprint.projectId}', '${sprint.id}')|" th:text="#{sidebar.reports }"></a></h6>
+        <h6><a href="#" th:if="${sprint.statusCode == 'active'}" th:onclick="|showDashboard('${sprint.projectId}')|" th:text="#{app.dashboard}"></a>
         </h6>
     </sprint>
 </th:block>

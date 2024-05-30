@@ -16,14 +16,14 @@
                         th:text="${codeTo.title}"></h2>
                     <div th:if="${!belongs.isEmpty()}">
                         <hr>
-                        <h5>Assigned:</h5>
+                        <h5 th:text="#{users.table.assigned} + ':'"></h5>
                         <table class="table table-striped" id="datatable">
                             <thead class="sticky-top bg-white">
                             <tr>
-                                <th>User ID</th>
-                                <th>Role</th>
-                                <th>Assigned</th>
-                                <th>Endpoint</th>
+                                <th th:text="#{users.table.User-ID}"></th>
+                                <th th:text="#{users.table.roles}"></th>
+                                <th th:text="#{users.table.assigned }"></th>
+                                <th th:text="#{users.table.endpoint}"></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -40,7 +40,7 @@
                     <th:block th:insert="${content}"/>
                     <div th:if="${!attachs.isEmpty()}">
                         <hr>
-                        <h5>Attachments:</h5>
+                        <h5 th:text="#{users.table.Attachments} + ':'"></h5>
                         <h6 th:each="att : ${attachs}">
                             <a download th:href="@{'/api/attachments/download/' + ${att.id}}">[[${att.name}]]</a> (<a
                                 target="_blank" th:href="@{'/api/attachments/download/' + ${att.id}}">open</a>)
